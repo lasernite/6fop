@@ -1,0 +1,9 @@
+{
+  "test": "simple play only unplayed song",
+  "function": "next_song",
+  "inputs": {
+    "likes": [0],
+    "dislikes": [],
+    "music": [[0],[1]]
+  }
+}

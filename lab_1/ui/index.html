@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>6.S04 Pandora Internet Radio</title>
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="common_styles.css">
+  <link rel="stylesheet" href="assignment_styles.css">
+  <link rel="stylesheet" href="material.min.css">
+</head>
+
+<body class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+  <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+    <h1 class="mdl-layout-title">6.S04 Pandora Internet Radio</h1>
+  </header>
+
+  <div id="s04-ribbon"></div>
+
+  <div class="mdl-layout__content">
+    <main id="s04-main" class="mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-grid">
+      <div>
+  <h1>Panda Internet Radio</h1>
+  <hr>
+  <p>YouTube is a little slow to load!</p>
+  <p>If song names show up, you'll be hearing music soon!</p>
+</div>
+
+<div>
+  <img src="note.svg" class="wobble">
+  <img src="panda.svg"class="jump">
+  <img src="note.svg" class="wobble">
+</div>
+
+<div id="metadata"></div>
+
+<div>
+  <button id="like" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="handle_like_button()">LIKE</button>
+  <div class="mdl-tooltip" for="like">I like this track!</div>
+
+  <button id="next" style="display:none;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="handle_next_button()">NEXT</button>
+  <div class="mdl-tooltip" for="next">Skip to another track.</div>
+
+  <button id="dislike" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="handle_dislike_button()">DISLIKE</button>
+  <div class="mdl-tooltip" for="dislike">I don't like this track.</div>
+</div>
+
+<div class="hidden">
+  <div id="player"></div>
+</div>
+
+    </main>
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="material.min.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
+

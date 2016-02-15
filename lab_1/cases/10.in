@@ -1,0 +1,9 @@
+{
+  "test": "like and dislike distances",
+  "function": "next_song",
+  "inputs": {
+    "likes": [1],
+    "dislikes": [0],
+    "music": [[0,0,0,0],[1,1,1,1],[0,0,0,1],[0,0,1,1],[1,1,0,1]]
+  }
+}

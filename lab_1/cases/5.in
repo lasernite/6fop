@@ -1,0 +1,9 @@
+{
+  "test": "like distance with 2 genes",
+  "function": "next_song",
+  "inputs": {
+    "likes": [0],
+    "dislikes": [],
+    "music": [[0,0],[1,1],[1,0],[0,1],[1,1]]
+  }
+}

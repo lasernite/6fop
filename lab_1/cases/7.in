@@ -1,0 +1,9 @@
+{
+  "test": "dislike distance with 1 gene",
+  "function": "next_song",
+  "inputs": {
+    "likes": [],
+    "dislikes": [0],
+    "music": [[0],[0],[1],[1],[0],[0]]
+  }
+}

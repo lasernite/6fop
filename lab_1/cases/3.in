@@ -1,0 +1,9 @@
+{
+  "test": "simple play next in lexicographic order (2/2)",
+  "function": "next_song",
+  "inputs": {
+    "likes": [0,1,2],
+    "dislikes": [],
+    "music": [[0],[1],[1],[1],[1],[1]]
+  }
+}
