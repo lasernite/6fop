@@ -1,9 +1,4 @@
 def step(gas):
-    # Put your solution here.  Good luck! 
-    # print "original gas"
-    # print gas
-    # print "state changed gas"
-    # print collision_state_change(gas)
     return propogate_state(collision_state_change(gas))
 
 
@@ -32,16 +27,6 @@ def collision_state_change(gas):
 					gas['state'][state_index] = ['u', 'd']
 				elif gas['state'][state_index] == ['u','d'] or gas['state'][state_index] == ['d', 'u']:
 					gas['state'][state_index] = ['l', 'r']
-
-				# for particle_index in range(len(state)):
-				# 	if state[particle_index] == "l":
-				# 		state[particle_index] = "d"
-				# 	elif state[particle_index] == "r":
-				# 		state[particle_index] = "u"
-				# 	elif state[particle_index] == "u":
-				# 		state[particle_index] = "l"
-				# 	elif state[particle_index] == "d":
-				# 		state[particle_index] = "r"
 
 	return gas
 
