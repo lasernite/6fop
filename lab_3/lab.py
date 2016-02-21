@@ -9,11 +9,12 @@ def step(gas):
 
 def collision_state_change(gas):
 
-	for state in gas['state']:
+	for state_index in range(len(gas['state'])):
+		state = gas['state'][state_index]
 		# Change state of gases colliding with walls
 		if 'w' in state:
 			# Change gases in all wall states to reverse direction
-			for particle_index in range(len(state)):
+			for particle_index in range(len(gas['state'][state_index])):
 				if state[particle_index] == "l":
 					state[particle_index] = "r"
 				elif state[particle_index] == "r":
@@ -26,16 +27,21 @@ def collision_state_change(gas):
 		# Change state of gases colliding
 		else:
 			# Only change particles if 2 present
-			if len(state) == 2:
-				for particle_index in range(len(state)):
-					if state[particle_index] == "l":
-						state[particle_index] = "d"
-					elif state[particle_index] == "r":
-						state[particle_index] = "u"
-					elif state[particle_index] == "u":
-						state[particle_index] = "l"
-					elif state[particle_index] == "d":
-						state[particle_index] = "r"
+			if len(gas['state'][state_index]) == 2:
+				if gas['state'][state_index] == ['l', 'r'] or gas['state'][state_index] == ['r', 'l']:
+					gas['state'][state_index] = ['u', 'd']
+				elif gas['state'][state_index] == ['u','d'] or gas['state'][state_index] == ['d', 'u']:
+					gas['state'][state_index] = ['l', 'r']
+
+				# for particle_index in range(len(state)):
+				# 	if state[particle_index] == "l":
+				# 		state[particle_index] = "d"
+				# 	elif state[particle_index] == "r":
+				# 		state[particle_index] = "u"
+				# 	elif state[particle_index] == "u":
+				# 		state[particle_index] = "l"
+				# 	elif state[particle_index] == "d":
+				# 		state[particle_index] = "r"
 
 	return gas
 
