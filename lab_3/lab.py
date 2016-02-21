@@ -22,11 +22,10 @@ def collision_state_change(gas):
 		# Change state of gases colliding
 		else:
 			# Only change particles if 2 present
-			if len(gas['state'][state_index]) == 2:
-				if gas['state'][state_index] == ['l', 'r'] or gas['state'][state_index] == ['r', 'l']:
-					gas['state'][state_index] = ['u', 'd']
-				elif gas['state'][state_index] == ['u','d'] or gas['state'][state_index] == ['d', 'u']:
-					gas['state'][state_index] = ['l', 'r']
+			if gas['state'][state_index] == ['l', 'r'] or gas['state'][state_index] == ['r', 'l']:
+				gas['state'][state_index] = ['u', 'd']
+			elif gas['state'][state_index] == ['u','d'] or gas['state'][state_index] == ['d', 'u']:
+				gas['state'][state_index] = ['l', 'r']
 
 	return gas
 
