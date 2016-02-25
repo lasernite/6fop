@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def did_x_and_y_act_together(data, actor_id_1, actor_id_2):
 	for film_tuple in data:
 		if film_tuple[0] == actor_id_1 and film_tuple[1] == actor_id_2:
@@ -45,18 +47,11 @@ def get_actors_with_bacon_number(data, n):
 
 def build_relationship_dictionary(data):
 	relationships = {}
-
+	
 	# Build all relationships
 	for film_tuple in data:
-		if film_tuple[0] in relationships.keys():
-			relationships[film_tuple[0]] += [film_tuple[1]]
-		else:
-			relationships[film_tuple[0]] = [film_tuple[1]]
-
-		if film_tuple[1] in relationships.keys():
-			relationships[film_tuple[1]] += [film_tuple[0]]
-		else:
-			relationships[film_tuple[1]] = [film_tuple[0]]
+		relationships.setdefault(film_tuple[0], []).append(film_tuple[1])
+		relationships.setdefault(film_tuple[1], []).append(film_tuple[0])
 
 	# Remove Duplicates and Parents
 	for actor_id in relationships:
@@ -80,23 +75,28 @@ def bfs(data, actor_id):
 	# Search until queue is empty
 	while queue:
 		path = queue.pop(0)
+		# # if path runs over itself, remove/pop a new one
+		# while len(set(path)) < len(path):
+		# 	print 'ding'
+		# 	path = queue.pop(0)
+
 		node = path[-1]
 
 		if node == actor_id:
 			return path
 
-		for children in relationships.get(node, []):
+		for child in relationships.get(node, []):
 			new_path = path[:]
-			new_path.append(children)
-			queue.append(new_path)
+			# Stop circular paths
+			if not child in new_path:
+				new_path.append(child)
+				if len(new_path) > 5:
+					return None
+
+				queue.append(new_path)
 
 
 def get_bacon_path(data, actor_id):
-	print bfs(data, actor_id)
-	
-
-
-	
 	return bfs(data, actor_id)
 
 
