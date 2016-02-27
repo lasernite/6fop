@@ -46,7 +46,7 @@ def did_x_and_y_act_together(data, actor_id_1, actor_id_2):
 
 def people_by_bacon_number(relationships, bacon_dic, actor_dic, n, m, previous_set):
 	if m == n:
-		return [bacon_dic, actor_dic]
+		return [bacon_dic, actor_dic, previous_set]
 	else:
 		for bacon_child in bacon_dic[m]:
 			for child in relationships[bacon_child]:
@@ -73,7 +73,7 @@ def build_relationship_dictionary(data):
 	# Build all relationships
 	for film_tuple in data:
 		relationships.setdefault(film_tuple[0], []).append(film_tuple[1])
-		# relationships.setdefault(film_tuple[1], []).append(film_tuple[0])
+		relationships.setdefault(film_tuple[1], []).append(film_tuple[0])
 
 	# Remove Duplicates and Parents
 	for actor_id in relationships:
@@ -104,19 +104,11 @@ def bfs(data, actor_id):
 	queue.append([actor_id]) 
 
 	# Search until queue is empty
-	# n = 1
-	# m = 1
 	while queue:
-		# a = datetime.now()
+		actor_depth -= 1
 		path = queue.pop(0)
-		# # if path runs over itself, remove/pop a new one
-		# while len(set(path)) < len(path):
-		# 	print 'ding'
-		# 	path = queue.pop(0)
 
 		node = path[-1]
-		# print node
-		# print relationships.get(node, [])
 
 		# Finally found kevin bacon!
 		if node == 4724:
@@ -124,27 +116,18 @@ def bfs(data, actor_id):
 			print path
 			return path
 
-		# print 'big loop'
-		# m += 1
-		# print m
-		# b = datetime.now()
-		#new_path = path[:]
 		for child in relationships.get(node, []):
-			# if bacon_to_actors
-			new_path = path[:]
-			# n+=1
-			# print 'lil loop'
-			# print n
-			# print new_path
-			# Stop circular paths
-			# if not child in new_path:
-			new_path.append(child)
-			if len(set(new_path)) == len(new_path):
-				queue.append(new_path)
-			#new_path.pop(-1)
-
-		# print datetime.now() - b
-		# print datetime.now() - a
+			if actor_depth < 0:
+				new_path = path[:]
+				new_path.append(child)
+				if len(set(new_path)) == len(new_path):
+					queue.append(new_path)
+			elif child in bacon_to_actors[actor_depth]:
+				new_path = path[:]
+				new_path.append(child)
+				if len(set(new_path)) == len(new_path):
+					queue.append(new_path)
+		
 
 
 def get_bacon_path(data, actor_id):
