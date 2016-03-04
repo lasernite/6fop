@@ -1,0 +1,9 @@
+{
+  "test": "transpose([1],1,1) = [1]",
+  "function": "transpose",
+  "inputs": {
+    "A": [1],
+    "m": 1,
+    "n": 1
+  }
+}

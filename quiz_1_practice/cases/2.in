@@ -1,0 +1,7 @@
+{
+  "test": "is_unique([0]) = True",
+  "function": "is_unique",
+  "inputs": {
+    "A": [0]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "test": "is_unique([[0,1,4,-1,0,100,-9999]) = False",
+  "function": "is_unique",
+  "inputs": {
+    "A": [0,1,4,-1,0,100,-9999]
+  }
+}
