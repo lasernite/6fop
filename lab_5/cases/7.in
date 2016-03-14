@@ -1,0 +1,19 @@
+{"test": "Start / Goal Not in Corners",
+"function": "solve_maze",
+"inputs":
+{
+"m": {
+    "height": 5,
+    "width": 5,
+    "maze": [["c","b","c","b","c"],
+             ["b", 1, "b", 1, "b"],
+             ["c","b","c","b","c"],
+             ["b", 1, "b", 1, "b"],
+             ["c","b","c","b","c"]]
+},
+"start_x": 0,
+"start_y": 1,
+"goal_x": 2,
+"goal_y": 4
+}
+}

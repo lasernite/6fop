@@ -1,0 +1,19 @@
+{"test": "Start and End on a Bomb",
+"function": "solve_maze",
+"inputs":
+{
+"m": {
+    "height": 5,
+    "width": 5,
+    "maze": [["b","c","c","c","b"],
+             ["c", 1, "c", 1, "c"],
+             ["c","c","c","c","c"],
+             ["c", 1, "c", 1, "c"],
+             ["b","c","c","c","b"]]
+},
+"start_x": 0,
+"start_y": 0,
+"goal_x": 4,
+"goal_y": 4
+}
+}

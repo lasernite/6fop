@@ -1,0 +1,8 @@
+{
+  "test": "knight_in_two_moves([0,0],[1,2]) = False",
+  "function": "knight_in_two_moves",
+  "inputs": {
+    "A": [0,0],
+    "B": [1,2]
+  }
+}

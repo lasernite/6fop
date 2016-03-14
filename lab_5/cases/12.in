@@ -1,0 +1,17 @@
+{"test": "Goal Before Start",
+"function": "solve_maze",
+"inputs": {"m": {
+    "height": 5,
+    "width": 6,
+    "maze": [[0, 0, 0, 0, 0, 1],
+             [0, 0, 1, 1, 1, 1],
+             [1, 0, 1, 0, 0, 1],
+             [0, 0, 0, "c", 0, 0],
+             [1, 1, 1, 1, 1, 0]]
+    },
+"start_x": 4,
+"start_y": 3,
+"goal_x": 1,
+"goal_y": 1
+}
+}

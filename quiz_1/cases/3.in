@@ -1,0 +1,7 @@
+{
+  "test": "second_largest([10, 1000, -4, 20]) = 20",
+  "function": "second_largest",
+  "inputs": {
+    "A": [10, 1000, -4, 20]
+  }
+}

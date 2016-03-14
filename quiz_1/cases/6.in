@@ -1,0 +1,7 @@
+{
+  "test": "run_length_encode(\"YYYYWWWVVFD\") = \"Y4W3V2F1D1\"",
+  "function": "run_length_encode",
+  "inputs": {
+    "S": "YYYYWWWVVFD"
+  }
+}

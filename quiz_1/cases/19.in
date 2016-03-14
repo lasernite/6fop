@@ -1,0 +1,8 @@
+{
+  "test": "knight_in_two_moves([4,4],[6,4]) = True",
+  "function": "knight_in_two_moves",
+  "inputs": {
+    "A": [4,4],
+    "B": [6,4]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test": "histogram([1,2,100,-10,999], 1) = [2]",
+  "function": "histogram",
+  "inputs": {
+    "A": [1,2,100,-10,999],
+    "low": 0,
+    "high": 10,
+    "n": 1
+  }
+}

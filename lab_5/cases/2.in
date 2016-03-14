@@ -1,0 +1,18 @@
+{"test": "No Path Exists",
+"function": "solve_maze",
+"inputs":
+{ "m": {
+    "height": 5,
+    "width": 6,
+    "maze": [[1, 1, 0, 0, 0, 1],
+             [0, 1, 1, 1, 1, 1],
+             [1, 1, 1, 0, 0, 1],
+             [0, 1, 0, 1, 0, 1],
+             [1, 1, 1, 1, 1, 1]]
+    },
+"start_x": 0,
+"start_y": 0,
+"goal_x": 5,
+"goal_y": 4
+}
+}

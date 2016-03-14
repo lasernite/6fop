@@ -1,0 +1,7 @@
+{
+  "test": "run_length_encode(\"\") = \"\"",
+  "function": "run_length_encode",
+  "inputs": {
+    "S": ""
+  }
+}
