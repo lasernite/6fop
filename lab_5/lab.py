@@ -36,10 +36,8 @@ def solve_maze_utility(m, x, y, goal_x, goal_y, sol, coins):
     else:
     	sol[y][x] = coins
     # recurse right
-    #solve_maze_utility(m, x+1, y, goal_x, goal_y, sol, coins)
     right = solve_maze_utility(m, x+1, y, goal_x, goal_y, sol, coins)
     # recurse down
-    #solve_maze_utility(m, x, y+1, goal_x, goal_y, sol, coins)
     down = solve_maze_utility(m, x, y+1, goal_x, goal_y, sol, coins)
 
     # if both x and y recursion return True, return max coin value between the calls
