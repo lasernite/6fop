@@ -1,0 +1,11 @@
+Mismatch with lecture that used divide and conquer; students expected to do the same here! Perhaps do L-shaped tiling and N-queens in this lecture; drop merge sort.
+
+Spend 2 weeks on this one?  (It was very hard for students.  Big jump with prior labs.)
+
+Have an intermediate milestone for basic recursion strategy ("design").
+
+More in HINTS file?  ("Start at top-left open space and consider horizontal and vertical pieces to cover it.")
+
+Just use a divide-and-conquer lab here?
+
+Change anchor to top left?  (Or suggest that students might use different representation internally.)

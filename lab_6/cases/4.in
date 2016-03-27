@@ -1,0 +1,5 @@
+{
+  "test": "2x5 tent with a rock",
+  "tent_size": [2,5],
+  "rocks": [[0,4]]
+}
