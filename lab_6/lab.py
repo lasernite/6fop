@@ -10,26 +10,30 @@ def pack(tentSize, missingSquares):
     #  "anchor": [x,y]
     #  "orientation": 0/1
     sleepers = []
-    stored = recurse_pack(tentSize, missingSquares, sleepers, [0,0])
-    print stored
-    return stored
+    result = recurse_pack(tentSize, missingSquares, sleepers, [0,0])
+    print result
+    if result[0]:
+    	return result[1]
+    else:
+    	return False
 
 
 def recurse_pack(tentSize, missingSquares, sleepers, currentSquare):
 	# if all squares have rocks or sleepers, horray it worked, return sleepers!
-	# print 'MissingSquares and tentSize and sleepers'
-	# print len(missingSquares)
-	# print tentSize[0]*tentSize[1]
-	# print sleepers
+	print 'MissingSquares and tentSize and sleepers'
+	print len(missingSquares)
+	print tentSize[0]*tentSize[1]
+	print sleepers
 	if len(missingSquares) == tentSize[0]*tentSize[1]:
-		return sleepers
+		print 'yay'
+		return True, sleepers
 
 	
 	valid_h = is_valid(tentSize, missingSquares, 0, currentSquare)
 	valid_v = is_valid(tentSize, missingSquares, 1, currentSquare)
 	# False if neither can be placed
 	if not valid_h and not valid_v:
-		return False
+		return False, sleepers
 
 	# horizontal test
 	if valid_h: 
@@ -46,7 +50,10 @@ def recurse_pack(tentSize, missingSquares, sleepers, currentSquare):
 		new_square2 = next_square(tentSize, new_square)
 		new_square3 = next_square(tentSize, new_square2) 
 		# recurse again to fill the next spot
-		recurse_pack(tentSize, newMissingSquares, new_sleepers, new_square3)
+		h = recurse_pack(tentSize, newMissingSquares, new_sleepers, new_square3)
+
+		if h[0]:
+			return True, h[1]
 
 	# vertical test
 	if valid_v:
@@ -58,28 +65,27 @@ def recurse_pack(tentSize, missingSquares, sleepers, currentSquare):
 		newMissingSquares.append([currentSquare[0],currentSquare[1]])
 		newMissingSquares.append([currentSquare[0],currentSquare[1]+1])
 		newMissingSquares.append([currentSquare[0],currentSquare[1]+2])
-		# Move three spaces forward
-		new_square = next_square(tentSize, currentSquare)
-		new_square2 = next_square(tentSize, new_square)
-		new_square3 = next_square(tentSize, new_square2) 
+		# Move one spaces forward
+		new_square = next_square(tentSize, currentSquare) 
 		# recurse again to fill the next spot
-		recurse_pack(tentSize, newMissingSquares, new_sleepers, new_square3)
+		v = recurse_pack(tentSize, newMissingSquares, new_sleepers, new_square)
 
-	return False
+		if v[0]:
+			return True, v[1]
+
+	return False, sleepers
 
 
 def is_valid(tentSize, missingSquares, orientation, currentSquare):
 	# calculate sleeping bag spaces
 	# horizontal
+	print 'currentSquare'
+	print currentSquare
 	if orientation == 0:
-		bed = [[currentSquare[0], currentSquare[1]],
-					[currentSquare[0]+1, currentSquare[1]],
-					[currentSquare[0]+2, currentSquare[1]]]
+		bed = [[currentSquare[0], currentSquare[1]], [currentSquare[0]+1, currentSquare[1]], [currentSquare[0]+2, currentSquare[1]]]
 	# vertical
 	elif orientation == 1:
-		bed = [[currentSquare[0], currentSquare[1]],
-					[currentSquare[0], currentSquare[1]+1],
-					[currentSquare[0], currentSquare[1]+2]]
+		bed = [[currentSquare[0], currentSquare[1]], [currentSquare[0], currentSquare[1]+1], [currentSquare[0], currentSquare[1]+2]]
 
 	# Check all bed spaces to ensure validity
 	for space in bed:
@@ -99,7 +105,7 @@ def next_square(tentSize, currentSquare):
 	if currentSquare[0] + 1 < tentSize[0]:
 		next_square = [currentSquare[0] + 1, currentSquare[1]]
 	else:
-		next_square = [currentSquare[0], currentSquare[1] + 1]
+		next_square = [0, currentSquare[1] + 1]
 
 	return next_square
 
