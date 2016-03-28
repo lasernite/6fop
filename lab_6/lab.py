@@ -5,6 +5,8 @@
 # If you can, recurse.  If either recursion returns true, return true, i.e., the solution.  
 # If neither works, return False.
 
+from datetime import datetime
+
 def pack(tentSize, missingSquares):
     # Take care to return a list of dictionaries with keys:
     #  "anchor": [x,y]
@@ -29,6 +31,7 @@ def recurse_pack(tentSize, missingSquares, sleepers, currentSquare):
 	if not valid_h and not valid_v:
 		return False, sleepers
 
+	# a = datetime.now()
 	# horizontal test
 	if valid_h: 
 		# add sleeper to sleepers
@@ -46,7 +49,8 @@ def recurse_pack(tentSize, missingSquares, sleepers, currentSquare):
 
 		if h[0]:
 			return True, h[1]
-
+	# if (datetime.now() - a).microseconds > 100000:
+	# 	print datetime.now() - a
 	# vertical test
 	if valid_v:
 		# add sleeper to sleepers
@@ -58,7 +62,7 @@ def recurse_pack(tentSize, missingSquares, sleepers, currentSquare):
 		newMissingSquares.append([currentSquare[0],currentSquare[1]+1])
 		newMissingSquares.append([currentSquare[0],currentSquare[1]+2])
 		# Move one spaces forward
-		new_square = next_square(tentSize, currentSquare, newMissingSquares) 
+		new_square = next_square(tentSize, currentSquare, newMissingSquares)
 		# recurse again to fill the next spot
 		v = recurse_pack(tentSize, newMissingSquares, new_sleepers, new_square)
 
@@ -77,6 +81,12 @@ def is_valid(tentSize, missingSquares, orientation, currentSquare):
 	elif orientation == 1:
 		bed = [[currentSquare[0], currentSquare[1]], [currentSquare[0], currentSquare[1]+1], [currentSquare[0], currentSquare[1]+2]]
 
+	# remaining squares count must be divisble by 3
+	if len(missingSquares) > 0:
+		a = float(tentSize[0]*tentSize[1])
+		if a > 0:
+			if (a - len(missingSquares)) % 3 != 0:
+				return False
 	# Check all bed spaces to ensure validity
 	for space in bed:
 		# If a rock or person return false
