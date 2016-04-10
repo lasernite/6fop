@@ -136,15 +136,17 @@ def autocorrect(trie, prefix, N):
 							valid_edits[new_word] = existent_word['frequency']
 
 		# get autocompleted words inside valid for frequency sorting
-		for word in autocompleted:
-			valid_edits[word] = get_trie(trie, word)['frequency']
+		# for word in autocompleted:
+		# 	valid_edits[word] = get_trie(trie, word)['frequency']
 
 		sort = sorted(valid_edits.items(), key=operator.itemgetter(1))
 		sort.reverse()
-		nitems = sort[0:N]
+		nitems = sort[0:num_needed]
 		final = []
 		for x in nitems:
 			final.append(x[0])
+		final += autocompleted
+		print sort
 		print N
 		print nitems
 		print final
