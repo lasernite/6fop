@@ -1,0 +1,9 @@
+{
+  "test": "cherrypick( [7,5,19,7,-100,4,16,1,18,18,5], 10, 0 ) = false",
+  "function": "cherrypick",
+  "inputs": {
+    "A": [7,5,19,7,-100,4,16,1,18,18,5],
+    "n": 10,
+    "required_sum": 0
+  }
+}

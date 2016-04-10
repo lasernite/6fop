@@ -1,0 +1,55 @@
+{
+  "test": "get_all_elements(... see .in file ...)",
+  "function": "get_all_elements",
+  "inputs": {
+    "root": {
+              "value": 0,
+              "left": {
+                    "value": -10,
+                    "left": {
+                        "value": -90,
+                        "left": {
+                            "value": -100,
+                            "left": null,
+                            "right": null
+                        },
+                        "right":  {
+                            "value": -50,
+                            "left": null,
+                            "right": null
+                        }
+                    },
+                    "right":  {
+                            "value": -4,
+                            "left": null,
+                            "right": null
+                    }
+              },
+              "right": {
+                    "value": 50,
+                    "left": {
+                        "value": 10,
+                        "left": {
+                            "value": 5,
+                            "left": null,
+                            "right": null
+                        },
+                        "right":  {
+                            "value": 20,
+                            "left": {
+                                "value": 15,
+                                "left": null,
+                                "right": null
+                            },
+                            "right":  {
+                                "value": 30,
+                                "left": null,
+                                "right": null
+                            }
+                        }
+                    },
+                    "right": null
+              }
+    }
+  }
+}

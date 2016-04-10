@@ -1,0 +1,7 @@
+{
+  "test": "remove_first_repeated([3,4,4,5]) = [3,4,5]",
+  "function": "remove_first_repeated",
+  "inputs": {
+    "A": [3,4,4,5]
+  }
+}

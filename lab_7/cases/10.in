@@ -1,0 +1,7 @@
+{
+  "f": "autocorrect",
+  "test": "Autocorrect on cat in small corpus",
+  "prefix": "cat",
+  "N": 4,
+  "words": ["cats", "cattle", "hat", "car", "act", "at", "chat", "crate", "act", "car", "act"]
+}

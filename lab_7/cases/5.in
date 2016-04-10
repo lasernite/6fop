@@ -1,0 +1,7 @@
+{
+  "f": "autocomplete",
+  "test": "Autocomplete on simple trie with less than N valid words",
+  "words": ["cat","car","carpet"],
+  "prefix": "car",
+  "N": 3
+}

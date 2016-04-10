@@ -1,4 +1,4 @@
-def solve_maze(m, start_x, start_y, goal_x, goal_y):
+ def solve_maze(m, start_x, start_y, goal_x, goal_y):
   # instantiate solution maze
   sol = [['X' for x in range(m['width'])] for row in range(m['height'])]
   # pass maze, solution, and arguments into solve_maze_utility

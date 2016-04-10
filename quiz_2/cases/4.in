@@ -1,0 +1,7 @@
+{
+  "test": "remove_first_repeated([0,'hi',1,'hello',3,4,'hi',5]) = [0,'hi',1,'hello',3,4,5]",
+  "function": "remove_first_repeated",
+  "inputs": {
+    "A": [0,"hi",1,"hello",3,4,"hi",5]
+  }
+}

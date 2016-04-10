@@ -1,0 +1,51 @@
+{
+  "test": "get_all_elements(... see .in file ...)",
+  "function": "get_all_elements",
+  "inputs": {
+
+    "root": {
+              "value": 1,
+              "left": null,
+              "right": {
+                          "value": 3,
+                          "left": null,
+                          "right": {
+                                      "value": 6,
+                                      "left": null,
+                                      "right": {
+                                                  "value": 10,
+                                                  "left": null,
+                                                  "right": {
+                                                              "value": 15,
+                                                              "left": null,
+                                                              "right": {
+                                                                          "value": 21,
+                                                                          "left": null,
+                                                                          "right": {
+                                                                                      "value": 28,
+                                                                                      "left": null,
+                                                                                      "right":  {
+                                                                                                  "value": 36,
+                                                                                                  "left": null,
+                                                                                                  "right": null
+                                                                                      }
+                                                                          }
+                                                              }
+                                                  }
+                                      }
+                          }
+              }
+    }
+
+
+
+
+
+
+
+
+
+
+
+  }
+}

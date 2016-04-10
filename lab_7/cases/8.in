@@ -1,0 +1,7 @@
+{
+  "f": "autocomplete",
+  "test": "Autocomplete with no word possibilities",
+  "words": ["hello","hell","history"],
+  "prefix": "help",
+  "N": 3
+}

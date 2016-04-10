@@ -1,0 +1,11 @@
+{
+  "test": "get_all_elements(... see .in file ...)",
+  "function": "get_all_elements",
+  "inputs": {
+    "root": {
+              "value": 0,
+              "left": null,
+              "right": null
+    }
+  }
+}
