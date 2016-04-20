@@ -126,7 +126,13 @@ class World:
             self.currentPlayer = nextPlayer
             return matches[0]
         elif action == "accuse":
-            return NotImplementedError
+            e = self.state['envelope']
+            if args['suspect'] in e and args['weapon'] in e and args['room'] in e:
+                return self.currentPlayer
+            else:
+                nextPlayerName = get_next_player_name(self, self.currentPlayer.name, self.state['players'])
+                # next player is adversary
+                return self.players[nextPlayerName]
         else:
             return None
                
