@@ -9,6 +9,7 @@ class Player:
         self.name = name
         self.cards = cards
         self.location = 'foyer'
+        self.seenCards = []
 
 
 
@@ -25,11 +26,14 @@ class World:
     def __init__(self, state):
         self.state = state
         # Make Player Objects Accessible
-        players = []
+        players = {}
         for playerName in state['players']:
-            players.append(Player(playerName, state['playersCards'][playerName]))
+            players[playerName] = Player(playerName, state['playersCards'][playerName])
         self.players = players
-        self.currentPlayer = players[0]
+        # first player starts
+        self.currentPlayer = players[state['players'][0]]
+        # revealed cards
+        self.revealedCards = []
 
         
     #Define any helper methods you'd like, as usual
@@ -49,21 +53,21 @@ class World:
 
     def get_location(self, player_string):
         #Returns the location of the specified player
-        return self.state['']
+        return self.players[player_string].location
 
     def get_cards(self, player_string):
         # Return a dictionary of cards held by a player
         # with the keys described in the README
-        return NotImplementedError()
+        return self.players[player_string].cards
 
 
     def get_revealed_cards(self):
         #Return a list of revealed cards (order matters!)
-        return NotImplementedError
+        return self.revealedCards
 
     def get_seen_cards(self, player_string):
         #Return the list of cards seen by this player
-        return NotImplementedError
+        return self.players[player_string].seenCards
 
 
     #This method controls game play
@@ -77,7 +81,9 @@ class World:
         elif action == "guess":
             # fill in code here, args is {"suspect":guess, "room":guess, "weapon":guess}, guess of next player in array
             # if player not in room in guess, return "invalid room"
+            return NotImplementedError
         elif action == "accuse":
+            return NotImplementedError
         else:
             return None
                
