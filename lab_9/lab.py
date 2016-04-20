@@ -37,6 +37,13 @@ class World:
 
         
     #Define any helper methods you'd like, as usual
+    def get_next_player_name(self, currentPlayerName, playersOrderedNames):
+        currentPlayerIndex = playersOrderedNames.index(currentPlayerName)
+        nextPlayerIndex = currentPlayerIndex + 1
+        if nextPlayerIndex >= len(playersOrderedNames):
+            nextPlayerIndex = 0
+        nextPlayerName = playersOrderedNames[nextPlayerIndex]
+        return nextPlayerName
         
     # These methods allow the UI and test infrastructure
     # to peek into your game state. You MUST implement each
@@ -77,11 +84,47 @@ class World:
     # arguments are action-dependent. Consult the readme for details
         if action == "travel":
             # fill in code here, args is a destination like "ballroom"
+            # change current player location
+            self.currentPlayer.location = args
+            # change current player and end turn
+            nextPlayerName = get_next_player_name(self, self.currentPlayer.name, self.state['players'])
+            self.currentPlayer = self.players[nextPlayerName]
             return "travel"
         elif action == "guess":
-            # fill in code here, args is {"suspect":guess, "room":guess, "weapon":guess}, guess of next player in array
+            nextPlayerName = get_next_player_name(self, self.currentPlayer.name, self.state['players'])
+            # next player is adversary
+            nextPlayer = self.players[nextPlayerName]
+            # fill in code here, args is {"suspect":guess, "weapon":guess, "room":guess}, guess of next player in array
             # if player not in room in guess, return "invalid room"
-            return NotImplementedError
+            if args['room'] != self.currentPlayer.location:
+                self.currentPlayer = nextPlayer
+                return "invalid room"
+
+            # get list of matches, in order of potential reveal
+            matches = []
+            if args['suspect'] in self.cards['suspects']:
+                matches.append(args['suspect'])
+            if args['weapon'] in self.cards['weapons']:
+                matches.append(args['weapons'])
+            if args['room'] in self.cards['rooms']:
+                matches.append(args['room'])
+
+            # if no matches spit back failure
+            if len(matches) == 0:
+                self.currentPlayer = nextPlayer
+                return "none"
+
+            # check if any have already been shown, if so return it
+            for card in matches:
+                if card in self.revealedCards:
+                    self.currentPlayer = nextPlayer
+                    return card
+
+            # otherwise add as revealed and seen cards and return lowest importance card
+            self.revealedCards.append(matches[0])
+            self.currentPlayer.seenCards.append(matches[0])
+            self.currentPlayer = nextPlayer
+            return matches[0]
         elif action == "accuse":
             return NotImplementedError
         else:
