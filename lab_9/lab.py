@@ -102,11 +102,11 @@ class World:
 
             # get list of matches, in order of potential reveal
             matches = []
-            if args['suspect'] in self.currentPlayer.cards['suspects']:
+            if args['suspect'] in nextPlayer.cards['suspects']:
                 matches.append(args['suspect'])
-            if args['weapon'] in self.currentPlayer.cards['weapons']:
+            if args['weapon'] in nextPlayer.cards['weapons']:
                 matches.append(args['weapon'])
-            if args['room'] in self.currentPlayer.cards['rooms']:
+            if args['room'] in nextPlayer.cards['rooms']:
                 matches.append(args['room'])
 
             # if no matches spit back failure
@@ -128,11 +128,11 @@ class World:
         elif action == "accuse":
             e = self.state['envelope']
             if args['suspect'] in e and args['weapon'] in e and args['room'] in e:
-                return self.currentPlayer
+                return self.currentPlayer.name
             else:
                 nextPlayerName = self.get_next_player_name(self.currentPlayer.name, self.state['players'])
                 # next player is adversary
-                return self.players[nextPlayerName]
+                return nextPlayerName
         else:
             return None
                
