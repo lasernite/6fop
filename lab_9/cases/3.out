@@ -1,0 +1,8 @@
+{
+"playerResult":["Mario", "Bowser", "Mario"],
+"locationResult": ["ballroom","foyer","study"],
+"revealedResult": ["revolver"],
+"seenResult":[[],["revolver"]],
+"returnResult":["travel", "revolver", "travel"]
+
+}

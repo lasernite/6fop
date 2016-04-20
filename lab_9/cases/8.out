@@ -1,0 +1,7 @@
+{
+"playerResult":["Edward", "Jacob","Edward", "Jacob","Edward", "Jacob","Edward", "Jacob","Edward", "Jacob","Edward"],
+"locationResult": ["foyer", "study", "foyer", "study", "library", "study", "kitchen", "ballroom", "kitchen", "ballroom", "kitchen"],
+"revealedResult": ["wrench"],
+"seenResult":[[], ["wrench"]],
+"returnResult":["travel", "travel", "invalid room", "wrench", "travel", "travel", "travel", "travel", "none", "invalid room", "Jacob"]
+}

@@ -1,0 +1,56 @@
+{
+    "test": "3 player",
+    "state": {
+        "envelope": [
+            "wrench",
+            "library",
+            "mustard"
+        ],
+        "players":["Srini", "Adam", "Iliya"],
+        "playersCards": {
+            "Srini": {
+                "weapons": [
+                    "revolver", "candlesticks"
+                ],
+                "rooms": [
+                    "ballroom", "hall"
+                ],
+                "suspects": [
+                    "plum", "white"
+                ]
+            },
+            "Adam": {
+                "weapons": [
+                    "leadpipe"
+                ],
+                "rooms": [
+                    "foyer", "kitchen"
+                ],
+                "suspects": [
+                    "green", "scarlett"
+                ]
+            },
+            "Iliya": {
+                "weapons": [
+                    "leadpipe", "knife"
+                ],
+                "rooms": [
+                    "conservatory", "study"
+                ],
+                "suspects": [
+                    "peacock"
+                ]
+}
+
+
+        }
+    },
+    "moves": [
+            "travel to the ballroom",
+            "guess green in the foyer with the knife",
+            "travel to the hall",
+            "guess plum in the hall with the leadpipe",
+            "guess white in the foyer with the candlesticks",
+            "guess peacock in the hall with the revolver"
+            ]
+}

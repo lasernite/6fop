@@ -1,0 +1,7 @@
+{
+"playerResult":["Obama", "Putin", "Obama", "Putin", "Obama", "Putin", "Obama"],
+"locationResult": ["foyer", "kitchen","study", "kitchen", "study", "kitchen", "study"],
+"revealedResult": ["green", "knife", "peacock"],
+"seenResult": [["green", "peacock"], ["knife"]],
+"returnResult":["green", "travel", "travel", "knife", "peacock", "invalid room", "Putin"]
+}

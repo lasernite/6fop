@@ -1,0 +1,51 @@
+#s04-ribbon {
+  background-color: #795548;
+}
+
+#s04-main {
+  flex-direction: column;
+  align-items: center;
+}
+
+#drawing {
+  width: 90%;
+  max-width: 512px;
+}
+
+#log > .input {
+  color: #3F51B5;
+}
+
+#log .special {
+  color: #9C27B0;
+}
+
+#log .result {
+  color: #3E2723;
+}
+
+.lab-ribbon {
+  width: 100%;
+  height: 40vh;
+  background-color: #795548;
+  flex-shrink: 0;
+}
+
+#log > p {
+  margin 0;
+  padding 0;
+
+  color: #B71C1C;
+
+  font-family: Courier, monospace;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+#player {
+  display: none;
+}
+
+.float-right {
+  float: right;
+}

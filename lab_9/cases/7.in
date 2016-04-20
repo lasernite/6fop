@@ -1,0 +1,48 @@
+{
+    "test": "Little Red Riding Hood",
+    "state": {
+        "envelope": [
+            "knife",
+            "kitchen",
+            "scarlett"
+        ],
+        "players":["Wolf", "Red"],
+        "playersCards": {
+            "Wolf": {
+                "weapons": [
+                    "wrench", "candlesticks"
+                ],
+                "rooms": [
+                    "foyer", "study", "library"
+                ],
+                "suspects": [
+                    "white", "peacock"
+                ]
+            },
+            "Red": {
+                "weapons": [
+                    "leadpipe", "revolver", "rope"
+                ],
+                "rooms": [
+                    "hall", "conservatory", "ballroom"
+                ],
+                "suspects": [
+                    "green", "mustard", "plum"
+                ]
+            }
+        }
+    },
+    "moves": [
+            "travel to the hall",
+            "travel to the study",
+            "travel to the hall",
+            "travel to the conservatory",
+            "guess scarlett in the hall with the wrench",
+            "guess green in the conservatory with the wrench",
+            "travel to the hall",
+            "travel to the ballroom",
+            "guess mustard in the hall with the rope",
+            "guess green in the ballroom with the rope",
+            "accuse scarlett in the library with the leadpipe"
+            ]
+}

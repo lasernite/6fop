@@ -1,0 +1,13 @@
+{
+    "test": "i",
+    "state": {
+        "envelope": ["rope", "kitchen", "scarlett"],
+        "players":["Srini"],
+        "playersCards": {
+            "Srini": {  "weapons": ["rope"],
+                        "rooms": ["kitchen"],
+			"suspects": ["white"]
+            }
+        }
+    }
+}

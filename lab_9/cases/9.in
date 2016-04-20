@@ -1,0 +1,43 @@
+{
+    "test": "Civil War",
+    "state": {
+        "envelope": [
+            "revolver",
+            "ballroom",
+            "white"
+        ],
+        "players":["Captain America", "Iron Man"],
+        "playersCards": {
+            "Captain America": {
+                "weapons": [
+                    "wrench", "leadpipe"
+                ],
+                "rooms": [
+                    "study", "kitchen", "conservatory"
+                ],
+                "suspects": [
+                    "plum", "mustard", "scarlett"
+                ]
+            },
+            "Iron Man": {
+                "weapons": [
+                    "candlesticks", "rope", "knife"
+                ],
+                "rooms": [
+                    "hall", "library"
+                ],
+                "suspects": [
+                    "green", "peacock"
+                ]
+            }
+        }
+    },
+    "moves": [
+            "guess white in the foyer with the revolver",
+            "guess green in the foyer with the rope",
+            "guess mustard in the foyer with the leadpipe",
+            "guess green in the foyer with the candlesticks",
+            "guess scarlett in the foyer with the wrench",
+            "guess peacock in the foyer with the knife"
+            ]
+}

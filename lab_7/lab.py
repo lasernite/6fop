@@ -146,10 +146,10 @@ def autocorrect(trie, prefix, N):
 		for x in nitems:
 			final.append(x[0])
 		final += autocompleted
-		print sort
-		print N
-		print nitems
-		print final
+		# print sort
+		# print N
+		# print nitems
+		# print final
 		return final
 
 	else:

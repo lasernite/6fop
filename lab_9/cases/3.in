@@ -1,0 +1,41 @@
+{
+    "test": "Mario Kart",
+    "state": {
+        "envelope": [
+            "rope",
+            "kitchen",
+            "scarlett"
+       	 ],
+        "players":["Mario", "Bowser"],
+        "playersCards": {
+            "Mario": {
+                "weapons": [
+                    "revolver", "candlesticks"
+                ],
+                "rooms": [
+                    "library", "hall", "foyer"
+                ],
+                "suspects": [
+                    "green", "white"
+                ]
+            },
+            "Bowser": {
+                "weapons": [
+                    "leadpipe", "wrench", "knife"
+                ],
+                "rooms": [
+                    "study", "ballroom", "conservatory"
+                ],
+                "suspects": [
+                    "plum", "mustard", "peacock"
+                ]
+            }
+
+        }
+    },
+    "moves": [
+            "travel to the ballroom",
+            "guess scarlett in the foyer with the revolver",
+            "travel to the study"
+            ]
+}

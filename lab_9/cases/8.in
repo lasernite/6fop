@@ -1,0 +1,48 @@
+{
+    "test": "Twilight",
+    "state": {
+        "envelope": [
+            "rope",
+            "study",
+            "peacock"
+        ],
+        "players":["Edward", "Jacob"],
+        "playersCards": {
+            "Edward": {
+                "weapons": [
+                    "wrench", "leadpipe"
+                ],
+                "rooms": [
+                    "ballroom", "kitchen", "conservatory"
+                ],
+                "suspects": [
+                    "plum", "mustard"
+                ]
+            },
+            "Jacob": {
+                "weapons": [
+                    "candlesticks", "revolver", "knife"
+                ],
+                "rooms": [
+                    "hall", "library", "foyer"
+                ],
+                "suspects": [
+                    "green", "scarlett", "white"
+                ]
+            }
+        }
+    },
+    "moves": [
+            "travel to the foyer",
+            "travel to the study",
+            "guess plum in the kitchen with the knife",
+            "guess green in the study with the wrench",
+            "travel to the library",
+            "travel to the study",
+            "travel to the kitchen",
+            "travel to the ballroom",
+            "guess mustard in the kitchen with the rope",
+            "guess green in the hall with the rope",
+            "accuse peacock in the study with the wrench"
+            ]
+}

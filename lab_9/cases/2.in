@@ -1,0 +1,29 @@
+{
+    "test": "travel one player",
+    "state": {
+        "envelope": [
+            "rope",
+            "kitchen",
+            "scarlett"
+        ],
+        "players":["Srini"],
+        "playersCards": {
+            "Srini": {
+                "weapons": [
+                    "rope"
+                ],
+                "rooms": [
+                    "kitchen"
+                ],
+                "suspects": [
+                    "scarlet"
+                ]
+            }
+        }
+    },
+    "moves": [
+            "travel to the ballroom",
+            "travel to the library",
+            "travel to the study"
+            ]
+}

@@ -1,0 +1,7 @@
+{
+"playerResult":["Wolf", "Red", "Wolf", "Red", "Wolf", "Red", "Wolf", "Red", "Wolf", "Red", "Wolf"],
+"locationResult": ["hall", "study", "hall", "conservatory", "hall", "conservatory", "hall", "ballroom", "hall", "ballroom", "hall"],
+"revealedResult": ["hall", "wrench"],
+"seenResult":[["hall"], ["wrench"]],
+"returnResult":["travel","travel","travel","travel","hall", "wrench","travel","travel", "hall", "none", "Red"]
+}

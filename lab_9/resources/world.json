@@ -1,0 +1,6 @@
+{
+    "players": ["Mario", "Luigi"],
+    "suspects": ["scarlett", "green", "plum", "mustard", "white", "peacock"],
+    "weapons": ["candlesticks", "knife", "revolver","leadpipe", "wrench", "rope"],
+    "rooms": ["library", "foyer", "ballroom", "conservatory", "study", "kitchen", "hall"]
+}

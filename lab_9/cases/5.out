@@ -1,0 +1,7 @@
+{
+"playerResult":["Srini", "Adam","Iliya", "Srini", "Adam", "Iliya"],
+"locationResult": ["ballroom", "foyer","hall", "ballroom", "foyer", "hall"],
+"revealedResult": ["knife", "revolver"],
+"seenResult":[[],["knife"], ["revolver"]],
+"returnResult":["travel", "knife", "travel", "invalid room", "none", "revolver"]
+}

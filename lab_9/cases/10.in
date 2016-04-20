@@ -1,0 +1,47 @@
+{
+    "test": "Time Turner",
+    "state": {
+        "envelope": [
+            "revolver",
+            "ballroom",
+            "white"
+        ],
+        "players":["Snape", "James"],
+        "playersCards": {
+            "Snape": {
+                "weapons": [
+                    "rope", "leadpipe"
+                ],
+                "rooms": [
+                    "hall", "foyer", "library"
+                ],
+                "suspects": [
+                    "green", "scarlett"
+                ]
+            },
+            "James": {
+                "weapons": [
+                    "candlesticks", "leadpipe", "knife"
+                ],
+                "rooms": [
+                    "study", "conservatory", "kitchen"
+                ],
+                "suspects": [
+                    "plum", "peacock", "mustard"
+                ]
+            }
+        }
+    },
+    "moves": [
+	    "travel to the kitchen",
+	    "guess green in the foyer with the rope",
+            "guess white in the kitchen with the revolver",
+            "guess green in the foyer with the rope",
+            "guess mustard in the kitchen with the leadpipe",
+            "guess green in the foyer with the candlesticks",
+	    "travel to the conservatory", 
+	    "guess green in the foyer with the candlesticks",
+            "guess Scarlett in the conservatory with the wrench",
+            "guess peacock in the foyer with the knife"
+            ]
+}

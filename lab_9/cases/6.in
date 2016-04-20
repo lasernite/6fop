@@ -1,0 +1,44 @@
+{
+    "test": "Politics",
+    "state": {
+        "envelope": [
+            "candlesticks",
+            "conservatory",
+            "mustard"
+        ],
+        "players":["Obama", "Putin"],
+        "playersCards": {
+            "Obama": {
+                "weapons": [
+                    "revolver", "knife", "rope"
+                ],
+                "rooms": [
+                    "ballroom", "hall", "library"
+                ],
+                "suspects": [
+                    "plum", "white", "scarlett"
+                ]
+            },
+            "Putin": {
+                "weapons": [
+                    "leadpipe", "wrench"
+                ],
+                "rooms": [
+                    "study", "kitchen", "foyer"
+                ],
+                "suspects": [
+                    "green", "peacock"
+                ]
+            }
+        }
+    },
+    "moves": [
+            "guess green in the foyer with the wrench",
+            "travel to the kitchen",
+            "travel to the study",
+            "guess peacock in the kitchen with the knife",
+            "guess peacock in the study with the rope",
+            "guess green in the ballroom with the wrench",
+            "accuse mustard in the conservatory with the wrench"
+            ]
+}

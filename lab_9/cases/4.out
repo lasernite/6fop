@@ -1,0 +1,35 @@
+{
+    "playerResult": [
+        "Peeta",
+        "Gale",
+        "Peeta",
+        "Gale",
+        "Peeta"
+    ],
+    "locationResult": [
+        "ballroom",
+        "foyer",
+        "study",
+        "foyer",
+        "study"
+    ],
+    "revealedResult": [
+        "revolver",
+        "plum"
+    ],
+    "seenResult": [
+        [
+            "plum"
+        ],
+        [
+            "revolver"
+        ]
+    ],
+    "returnResult": [
+        "travel",
+        "revolver",
+        "travel",
+        "revolver",
+        "plum"
+    ]
+}

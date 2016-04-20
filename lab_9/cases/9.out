@@ -1,0 +1,7 @@
+{
+"playerResult":["Captain America", "Iron Man", "Captain America", "Iron Man", "Captain America", "Iron Man"],
+"locationResult": ["foyer", "foyer", "foyer", "foyer", "foyer","foyer"],
+"revealedResult": [],
+"seenResult":[[], []],
+"returnResult":["none", "none", "none", "none", "none", "none"]
+}

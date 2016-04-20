@@ -1,0 +1,43 @@
+{
+    "test": "May the Odds be Ever in Your Favor",
+    "state": {
+        "envelope": [
+            "rope",
+            "kitchen",
+            "scarlett"
+        ],
+        "players":["Peeta", "Gale"],
+        "playersCards": {
+            "Peeta": {
+                "weapons": [
+                    "revolver", "candlesticks"
+                ],
+                "rooms": [
+                    "library", "hall"
+                ],
+                "suspects": [
+                    "green", "white"
+                ]
+            },
+            "Gale": {
+                "weapons": [
+                    "leadpipe", "wrench", "knife"
+                ],
+                "rooms": [
+                    "study", "ballroom", "conservatory"
+                ],
+                "suspects": [
+                    "plum", "mustard", "peacock"
+                ]
+            }
+
+        }
+    },
+    "moves": [
+            "travel to the ballroom",
+            "guess scarlett in the foyer with the revolver",
+            "travel to the study",
+            "guess plum in the foyer with the revolver",
+            "guess plum in the study with the candlesticks"
+            ]
+}

@@ -1,0 +1,7 @@
+{
+"playerResult":["Snape", "James", "Snape", "James", "Snape", "James", "Snape", "James", "Snape", "James"],
+"locationResult": ["kitchen", "foyer", "kitchen", "foyer", "kitchen","foyer", "conservatory", "foyer", "conservatory", "foyer"],
+"revealedResult": ["green", "kitchen", "conservatory", "foyer"],
+"seenResult":[["kitchen", "conservatory"], ["green", "foyer"]],
+"returnResult":["travel", "green", "kitchen", "green", "kitchen", "green", "travel", "green", "conservatory", "foyer"]
+}
