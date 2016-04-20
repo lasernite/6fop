@@ -87,11 +87,11 @@ class World:
             # change current player location
             self.currentPlayer.location = args
             # change current player and end turn
-            nextPlayerName = get_next_player_name(self, self.currentPlayer.name, self.state['players'])
+            nextPlayerName = self.get_next_player_name(self.currentPlayer.name, self.state['players'])
             self.currentPlayer = self.players[nextPlayerName]
             return "travel"
         elif action == "guess":
-            nextPlayerName = get_next_player_name(self, self.currentPlayer.name, self.state['players'])
+            nextPlayerName = self.get_next_player_name(self.currentPlayer.name, self.state['players'])
             # next player is adversary
             nextPlayer = self.players[nextPlayerName]
             # fill in code here, args is {"suspect":guess, "weapon":guess, "room":guess}, guess of next player in array
@@ -102,11 +102,11 @@ class World:
 
             # get list of matches, in order of potential reveal
             matches = []
-            if args['suspect'] in self.cards['suspects']:
+            if args['suspect'] in self.currentPlayer.cards['suspects']:
                 matches.append(args['suspect'])
-            if args['weapon'] in self.cards['weapons']:
-                matches.append(args['weapons'])
-            if args['room'] in self.cards['rooms']:
+            if args['weapon'] in self.currentPlayer.cards['weapons']:
+                matches.append(args['weapon'])
+            if args['room'] in self.currentPlayer.cards['rooms']:
                 matches.append(args['room'])
 
             # if no matches spit back failure
@@ -130,7 +130,7 @@ class World:
             if args['suspect'] in e and args['weapon'] in e and args['room'] in e:
                 return self.currentPlayer
             else:
-                nextPlayerName = get_next_player_name(self, self.currentPlayer.name, self.state['players'])
+                nextPlayerName = self.get_next_player_name(self.currentPlayer.name, self.state['players'])
                 # next player is adversary
                 return self.players[nextPlayerName]
         else:
