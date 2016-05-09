@@ -1,0 +1,7 @@
+{
+  "end": [
+    {"shape": "circle", "radius": 5, "center": [35.440380911576, 25.72650807568879]},
+    {"shape": "circle", "radius": 20, "center": [60, 100.0]},
+    {"shape": "circle", "radius": 20, "center": [60, 0]}
+  ]
+}

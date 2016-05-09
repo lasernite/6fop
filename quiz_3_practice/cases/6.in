@@ -1,0 +1,9 @@
+{
+  "test": "find_valid_ordering(... 6.S04 ...)",
+  "function": "find_valid_ordering",
+  "inputs": {
+    "class_graph":  {
+                      "6.S04": []
+                    }
+  }
+}

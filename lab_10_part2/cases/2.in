@@ -1,0 +1,16 @@
+{
+  "test": "2: Horizontal motion 1/3",
+  "number": 2,
+  "steps": [
+    {"winner": 0, "time": 0.1}
+  ],
+  "width":100,
+  "height":100,
+  "paddle1X": 0,
+  "paddle2X": 0,
+  "paddle_offset": 0,
+  "paddle_radius": 10,
+  "ballPosition":[80,50],
+  "ballVelocity":[10,0],
+  "blocks":[]
+}

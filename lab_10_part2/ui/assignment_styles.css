@@ -1,0 +1,68 @@
+#s04-ribbon {
+  background-color: #880E4F;
+}
+
+#s04-main {
+  flex-direction: column;
+  align-items: center;
+}
+
+#rpc_status {
+  order: 99;
+}
+
+.scoreboard {
+  margin-bottom: 5ex;
+}
+
+.scoreboard p {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.scoreboard p:first-of-type {
+  float: left;
+}
+
+.scoreboard p:last-of-type {
+  float: right;
+}
+
+.scoreboard p span {
+  color: #D50000;
+}
+
+main > div {
+  clear: both;
+}
+
+#drawing {
+  width: 300px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 5px solid gray;
+
+  background-color: #000;
+  clear: both;
+}
+
+#p1_right, #p2_right {
+  float: right;
+  margin-bottom: 1ex;
+}
+
+hr {
+  clear: both;
+}
+
+#player {
+  display: none;
+}
+
+.float-right {
+  float: right;
+}

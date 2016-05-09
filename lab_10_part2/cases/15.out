@@ -1,0 +1,8 @@
+{
+  "end": [
+    {"shape": "circle", "radius": 10, "center": [50, 0]},
+    {"shape": "circle", "radius": 5, "center": [50.0, 80.4]},
+    {"shape": "circle", "radius": 10, "center": [50, 100.0]},
+    {"max": [49.0, 60.0], "shape": "rect", "min": [29.0, 40.0]}
+  ]
+}

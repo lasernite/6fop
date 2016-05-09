@@ -1,0 +1,8 @@
+{
+  "test": "can_ben_lose: Ben can lose",
+  "function": "can_ben_lose",
+  "inputs": {
+    "board": [[0, 1, 1], [1, 0, 0], [-1, 0, 1]],
+    "benTurn": false
+  }
+}

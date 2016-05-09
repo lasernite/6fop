@@ -1,0 +1,11 @@
+{
+  "test": "find_valid_ordering(... 6.01, 6.006, 0.046 ...)",
+  "function": "find_valid_ordering",
+  "inputs": {
+    "class_graph":  {
+                      "6.01": ["6.006"],
+                      "6.046": [],
+                      "6.006": ["6.046"]
+                    }
+  }
+}

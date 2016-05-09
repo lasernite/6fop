@@ -1,0 +1,8 @@
+{
+  "test": "count_viable([6, 7, 8, 9, 10], 5)",
+  "function": "count_viable",
+  "inputs": {
+    "weights": [6, 7, 8, 9, 10],
+    "capacity": 5
+  }
+}

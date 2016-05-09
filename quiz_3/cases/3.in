@@ -1,0 +1,201 @@
+{
+  "test": "get_popular_edge: Charlotte, Boston",
+  "function": "get_popular_edge",
+  "inputs": {
+	"paths":
+		[
+    [
+        "Cleveland",
+        "DC",
+        "Charlotte",
+        "Boston",
+        "Baltimore",
+        "Chicago",
+        "San Fran",
+        "Miami"
+    ],
+    [
+        "Phili",
+        "Charlotte",
+        "Boston",
+        "Las Vegas",
+        "New York",
+        "Memphis",
+        "Phoenix",
+        "New Orleans",
+        "LA",
+        "Orlando",
+        "Austin"
+    ],
+    [
+        "LA",
+        "Orlando",
+        "Chicago",
+        "Miami",
+        "Cleveland",
+        "New York",
+        "San Fran",
+        "Las Vegas",
+        "New York"
+    ],
+    [
+        "Charlotte",
+        "Boston",
+        "Cleveland",
+        "DC",
+        "Memphis",
+        "Milwaukee",
+        "Las Vegas",
+        "New Orleans"
+    ],
+    [
+        "Miami",
+        "New York",
+        "San Fran",
+        "Denver",
+        "Boston",
+        "Las Vegas",
+        "New Orleans",
+        "Memphis",
+        "Phoenix",
+        "Seattle",
+        "Orlando"
+    ]
+],
+    	"graph":
+		{
+    "Austin": [
+        "San Fran",
+        "Cleveland",
+        "New York",
+        "Denver",
+        "DC"
+    ],
+    "Baltimore": [
+        "Orlando",
+        "New York",
+        "Chicago",
+        "San Fran",
+        "DC"
+    ],
+    "Boston": [
+        "Cleveland",
+        "Las Vegas",
+        "New Orleans",
+        "Baltimore"
+    ],
+    "Charlotte": [
+        "San Fran",
+        "Boston",
+        "DC"
+    ],
+    "Chicago": [
+        "Cleveland",
+        "San Fran",
+        "Miami",
+        "Denver"
+    ],
+    "Cleveland": [
+        "LA",
+        "DC",
+        "Las Vegas",
+        "New York"
+    ],
+    "DC": [
+        "Memphis",
+        "Orlando",
+        "New Orleans",
+        "Cleveland",
+        "Seattle",
+        "Charlotte"
+    ],
+    "Denver": [
+        "Boston",
+        "Seattle",
+        "New York",
+        "LA",
+        "Chicago"
+    ],
+    "LA": [
+        "Phili",
+        "Orlando",
+        "Seattle"
+    ],
+    "Las Vegas": [
+        "Cleveland",
+        "New York",
+        "New Orleans",
+        "Denver",
+        "LA"
+    ],
+    "Memphis": [
+        "Boston",
+        "Phoenix",
+        "Milwaukee",
+        "San Fran"
+    ],
+    "Miami": [
+        "San Fran",
+        "New York",
+        "Cleveland"
+    ],
+    "Milwaukee": [
+        "Orlando",
+        "Las Vegas",
+        "DC",
+        "Charlotte",
+        "Austin",
+        "Phili",
+        "Boston"
+    ],
+    "New Orleans": [
+        "Charlotte",
+        "Memphis",
+        "Las Vegas",
+        "Cleveland",
+        "LA"
+    ],
+    "New York": [
+        "San Fran",
+        "Memphis",
+        "New Orleans"
+    ],
+    "Orlando": [
+        "Denver",
+        "Austin",
+        "Chicago",
+        "Charlotte",
+        "Las Vegas"
+    ],
+    "Phili": [
+        "Charlotte",
+        "LA",
+        "Chicago"
+    ],
+    "Phoenix": [
+        "Denver",
+        "New Orleans",
+        "Miami",
+        "San Fran",
+        "Seattle",
+        "Boston"
+    ],
+    "San Fran": [
+        "Orlando",
+        "Denver",
+        "Miami",
+        "Las Vegas",
+        "DC",
+        "Chicago",
+        "Charlotte"
+    ],
+    "Seattle": [
+        "New York",
+        "New Orleans",
+        "Orlando",
+        "Memphis"
+    ]
+}
+
+	}
+}
